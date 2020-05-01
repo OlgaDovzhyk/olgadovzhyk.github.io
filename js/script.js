@@ -1,5 +1,3 @@
-/* ............... Header Toggle Cover ................. */
-
 $(document).ready(function () {
   $(window).scroll(function () {
     var scroll = $(window).scrollTop();
@@ -15,13 +13,8 @@ $(document).ready(function () {
   });
 });
 
-/* ............... // Header Toggle Cover .............. */
-
-/* ................. Button Scroll ..................... */
-
 $("a[href='#bottom']").click(function () {
-  $("html, body").animate(
-    {
+  $("html, body").animate({
       scrollTop: $(document).height(),
     },
     2000
@@ -29,8 +22,7 @@ $("a[href='#bottom']").click(function () {
 });
 
 $(".sbtn").click(function () {
-  $("body, html").animate(
-    {
+  $("body, html").animate({
       scrollTop: 2015,
     },
     800
@@ -46,18 +38,13 @@ $(document).ready(function () {
     }
   });
   $("a[href='#toTop']").click(function () {
-    $("html, body").animate(
-      {
+    $("html, body").animate({
         scrollTop: 0,
       },
       2000
     );
   });
 });
-
-/* .............. .. Button Scroll ..................... */
-
-/* ................. Menu Toggle .................... */
 
 $(document).ready(function () {
   $("#burger").click(function () {
@@ -66,8 +53,6 @@ $(document).ready(function () {
     ).toggleClass("active");
   });
 });
-
-/* .............. // Menu Toggle ................. */
 
 var modal = document.getElementById("myModal");
 
@@ -89,8 +74,6 @@ window.onclick = function (event) {
   }
 };
 
-/*  ................................... Calendar .....................................*/
-
 $(document).ready(function () {
   $("#datepicker")
     .datepicker({
@@ -104,27 +87,3 @@ $(document).ready(function () {
       color: "green",
     });
 });
-
-/*  ................................ // Calendar .....................................*/
-
-// Button "TOP"
-
-//window.onload = function () {
-//    var scrolled;
-//    var timer;
-//    document.getElementById('toTop').onclick = function () {
-//        scrolled = window.pageYOffset;
-//        scrollToTop();
-//    }
-//
-//    function scrollToTop() {
-//        if (scroll > 0) {
-//            window.scrollTo(0, scrolled);
-//            scrolled = scrolled - 50; //100- швидкість прокрутки
-//            timer = setTimeout(scrollToTop, 100);
-//        } else {
-//            clearTimeout(timer);
-//            window.scrollTo(0, 0);
-//        }
-//    }
-//}

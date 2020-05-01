@@ -2,763 +2,761 @@
 @import "mixins";
 
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .container {
-    max-width: 1600px;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 header {
-    max-width: 1600px;
-    width: 100%;
-    height: 100vh;
-    background-image: url(../img/bg1.jpg);
-    background-size: cover;
+  max-width: 1600px;
+  padding-bottom: 10vh;
+  width: 100%;
+  background-image: url(../img/bg1.jpg);
+  background-size: cover;
 }
 
 .headerTop {
-    @include flexible;
+  @include flexible;
 
-    .wrapper {
-        position: fixed;
-        display: flex;
-        justify-content: flex-end;
-        width: 100%;
-        z-index: 9;
-        height: 110px;
-        align-content: center;
+  .wrapper {
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    z-index: 9;
+    height: 110px;
+    align-content: center;
 
-        .btn {
-            display: none;
-            height: 40px;
-            width: 45px;
-            z-index: 10;
-            margin: auto 0;
-            position: relative;
-            left: 47%;
-            background-color: transparent;
-            cursor: pointer;
-            overflow: hidden;
-            box-sizing: border-box;
+    .btn {
+      display: none;
+      height: 40px;
+      width: 45px;
+      z-index: 10;
+      margin: auto 0;
+      position: relative;
+      left: 47%;
+      background-color: transparent;
+      cursor: pointer;
+      overflow: hidden;
+      box-sizing: border-box;
 
-            span {
-                width: 40px;
-                height: 6px;
-                display: inline-block;
-                z-index: 12;
-                top: 0;
-                background-color: palegoldenrod;
-                position: absolute;
-                transition: 0.2s linear;
+      span {
+        width: 40px;
+        height: 6px;
+        display: inline-block;
+        z-index: 12;
+        top: 0;
+        background-color: palegoldenrod;
+        position: absolute;
+        transition: 0.2s linear;
 
-                &:first-child {
-                    top: 1px;
-                }
-
-                &:nth-child(2) {
-                    top: 14px;
-
-                }
-
-                &:nth-child(3) {
-                    top: 27px;
-
-                }
-            }
+        &:first-child {
+          top: 1px;
         }
 
-        img {
-            width: 176px;
-            height: auto;
-            position: fixed;
-            left: 3%;
+        &:nth-child(2) {
+          top: 14px;
         }
+
+        &:nth-child(3) {
+          top: 27px;
+        }
+      }
     }
+
+    img {
+      width: 150px;
+      height: auto;
+      position: fixed;
+      left: 3%;
+    }
+  }
 }
 
 .headerBottom {
-    margin-top: 10%;
+  margin-top: 10%;
 
-    .divider {
-        width: 234px;
-        height: 46px;
-        margin: 4vh auto 0;
-        color: #dbd8c3;
-        opacity: 0.7;
-        display: block;
-    }
+  .divider {
+    width: 234px;
+    height: 46px;
+    margin: 4vh auto 0;
+    color: #dbd8c3;
+    opacity: 0.7;
+    display: block;
+  }
 
-    h1 {
-        font-family: $font;
-        @include font(90px, 1.3);
-        color: $baseColor;
-        //        margin-top: 10vh;
-    }
+  h1 {
+    font-family: $font;
+    @include font(90px, 1.3);
+    color: $baseColor;
+  }
 }
 
 nav {
-    margin-right: 3%;
+  margin-right: 3%;
+  z-index: 99;
+
+  ul {
+    display: flex;
+    margin-top: 27px;
     z-index: 99;
 
-    ul {
-        display: flex;
-        margin-top: 27px;
-        z-index: 99;
+    a {
+      color: hsl(0, 0%, 100%);
+      @include font(24px, 1.5);
+      display: block;
+      text-transform: capitalize;
+      transition: all linear 0.3s;
+      @include pad(0 25px 0 0);
 
-        a {
-            color: hsl(0, 0%, 100%);
-            @include font(24px, 1.5);
-            display: block;
-            text-transform: capitalize;
-            transition: all linear .3s;
-            @include pad (0 25px 0 0);
-
-            &:hover {
-                transform: scale(1.06);
-                text-decoration: underline;
-            }
-        }
+      &:hover {
+        transform: scale(1.06);
+        text-decoration: underline;
+      }
     }
+  }
 }
 
 nav {
-    a.pad {
-        padding-right: 13px;
+  a.pad {
+    padding-right: 13px;
+  }
+
+  a.fa {
+    color: #dab33e;
+    margin-top: 6px;
+    font-size: 23px;
+
+    &:hover {
+      color: $baseColor;
     }
 
-    a.fa {
-        color: #dab33e;
-        margin-top: 6px;
-        font-size: 23px;
-
-        &:hover {
-            color: $baseColor;
-        }
-
-        &:focus {
-            outline: none;
-        }
+    &:focus {
+      outline: none;
     }
+  }
 }
 
 button {
-    cursor: pointer;
-    color: $baseColor;
-    @include font(18px, 1.5);
-    text-transform: uppercase;
-    @include pad (21px 53px 21px);
-    vertical-align: auto;
-    white-space: nowrap;
-    width: 229px;
+  cursor: pointer;
+  color: $baseColor;
+  @include font(18px, 1.5);
+  text-transform: uppercase;
+  @include pad(21px 53px 21px);
+  vertical-align: auto;
+  white-space: nowrap;
+  width: 229px;
 }
 
 .btnContainer {
-    width: 482px;
-    height: 75px;
-    position: relative;
-    margin: 5vh auto 0;
+  width: 482px;
+  height: 75px;
+  position: relative;
+  margin: 5vh auto 0;
 
-    &.fbtn,
-    &.sbtn {
-        position: absolute;
+  &.fbtn,
+  &.sbtn {
+    position: absolute;
+  }
+
+  .fbtn {
+    background-color: rgba(38, 37, 28, 0.7);
+    transition: 0.3s linear;
+    @include border(black);
+
+    &:hover {
+      color: greenyellow;
+      @include border(greenyellow);
     }
+  }
 
-    .fbtn {
-        background-color: rgba(38, 37, 28, 0.7);
-        transition: .3s linear;
-        @include border(black);
+  .sbtn {
+    background-color: rgba(185, 169, 92, 0.8);
+    transition: 0.3s linear;
+    @include border(#fff);
+    margin-left: 15px;
 
-        &:hover {
-            color: greenyellow;
-            @include border(greenyellow);
-        }
+    &:hover {
+      background: rgba(38, 37, 28, 0.7);
+      color: $baseColor;
+      @include border(#fff);
     }
-
-    .sbtn {
-        background-color: rgba(185, 169, 92, 0.8);
-        transition: .3s linear;
-        @include border(#fff);
-        margin-left: 15px;
-
-        &:hover {
-            background: rgba(38, 37, 28, 0.7);
-            color: $baseColor;
-            @include border(#fff);
-        }
-    }
+  }
 }
 
 /* ...............SECOND BLOCK.......................................... */
 
 .secondBlock {
-    height: 700px;
-    @include flexible;
+  height: 700px;
+  @include flexible;
 
-    .leftSide {
-        width: 45%;
+  .leftSide {
+    width: 45%;
 
-        h2 {
-            font-family: $font;
-            color: #cc9900;
-            @include font(36px, 1.2);
-            @include pad (105px 105px 20px 150px);
-        }
-
-        p {
-            font-family: $font2;
-            padding-left: 23%;
-            width: 80%;
-            word-wrap: break-word;
-            color: #000;
-            @include font(16px, 1.5);
-        }
-
-        .cook_img {
-
-            margin: {
-                top: 53px;
-                left: auto;
-                right: auto;
-            }
-
-            display: block;
-        }
+    h2 {
+      font-family: $font;
+      color: #cc9900;
+      @include font(36px, 1.2);
+      @include pad(105px 105px 20px 150px);
     }
+
+    p {
+      font-family: $font2;
+      padding-left: 23%;
+      width: 80%;
+      word-wrap: break-word;
+      color: #000;
+      @include font(16px, 1.5);
+    }
+
+    .cook_img {
+      margin: {
+        top: 53px;
+        left: auto;
+        right: auto;
+      }
+
+      display: block;
+    }
+  }
 }
 
 .secondBlock {
-    .divider {
-        width: 240px;
-        height: 25px;
-        display: block;
-        margin: 0 auto 30px 34%;
-    }
+  .divider {
+    width: 240px;
+    height: 25px;
+    display: block;
+    margin: 0 auto 30px 34%;
+  }
 
-    .rightSide {
-        height: 700px;
-        padding-top: 76px;
-        padding-right: 10%;
-        width: 55%;
+  .rightSide {
+    height: 700px;
+    padding-top: 76px;
+    padding-right: 10%;
+    width: 55%;
 
-        img {
-            height: auto;
-            max-width: 551px;
-            width: 100%;
-        }
+    img {
+      height: auto;
+      max-width: 551px;
+      width: 100%;
     }
+  }
 }
 
 // ......................THIRD BLOCK............................................
 .thirdBlock {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    height: 100vh;
-    background-image: url("../img/thirdBlock_img/bg3.jpg");
-    background-size: cover;
-    @include pad (6% 15% 0 0);
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/thirdBlock_img/bg3.jpg");
+  background-size: cover;
+  @include pad(6% 15% 0 0);
 
-    .square div {
-        margin-top: 10%;
-        @include flexible;
-        padding: 0 12%;
-        margin-top: 20%;
+  .square div {
+    margin-top: 10%;
+    @include flexible;
+    padding: 0 12%;
+    margin-top: 20%;
 
-        img {
-            margin-right: 6%;
-            margin-left: -23%;
-        }
+    img {
+      margin-right: 6%;
+      margin-left: -23%;
     }
+  }
 }
 
 .square {
-    position: relative;
-    top: -5%;
-    width: 500px;
-    height: 500px;
-    background: rgba(0, 0, 0, .6);
-    padding-top: 3.7%;
-    box-sizing: border-box;
+  position: relative;
+  top: -5%;
+  width: 500px;
+  height: 500px;
+  background: rgba(0, 0, 0, 0.6);
+  padding-top: 3.7%;
+  box-sizing: border-box;
 
-    h1,
-    p {
-        color: $baseColor;
-        text-align: center;
-    }
+  h1,
+  p {
+    color: $baseColor;
+    text-align: center;
+  }
 
-    h1 {
-        font-family: 'Yeseva One';
-        font-size: 36px;
-        margin-bottom: 20px;
-    }
+  h1 {
+    font-family: "Yeseva One";
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
 
-    p {
-        padding: 0 11%;
-    }
+  p {
+    padding: 0 11%;
+  }
 
-    img {
-        padding-left: 25%;
-        margin-bottom: 4%;
-    }
+  img {
+    padding-left: 25%;
+    margin-bottom: 4%;
+  }
 }
 
 // ............................FOURTH BLOCK..............................
 
 .fourthBlock {
-    background: $baseColor;
-    padding-left: 7.5%;
-    margin-top: 4%;
+  background: $baseColor;
+  padding-left: 7.5%;
+  margin-top: 4%;
 
-    .boxWrapper1,
-    .boxWrapper2 {
-        @include flexible;
-        width: 100%;
-        max-width: 1150px;
-        text-align: center;
-        margin-bottom: 30px;
+  .boxWrapper1,
+  .boxWrapper2 {
+    @include flexible;
+    width: 100%;
+    max-width: 1150px;
+    text-align: center;
+    margin-bottom: 30px;
 
-        div {
-            width: 40%;
+    div {
+      width: 40%;
 
-            h1 {
-                color: #cc9900;
-                font-size: 30px;
-                font-family: 'Yeseva One';
-            }
+      h1 {
+        color: #cc9900;
+        font-size: 30px;
+        font-family: "Yeseva One";
+      }
 
-            img {
-                padding: 10px 0;
-                width: auto;
-                height: auto;
-            }
+      img {
+        padding: 10px 0;
+        width: auto;
+        height: auto;
+      }
 
-            p {
-                padding-bottom: 5px;
-                color: #4c4c4c;
-                font-size: 16px;
-                line-height: 1.8;
-                font-family: 'Lato Regular';
-                text-align: left;
+      p {
+        padding-bottom: 5px;
+        color: #4c4c4c;
+        font-size: 16px;
+        line-height: 1.8;
+        font-family: "Lato Regular";
+        text-align: left;
 
-                &:nth-last-child(2n) {
-                    display: flex;
-                    justify-content: space-between;
-                    width: 100%;
-                    color: #c89f2d;
-                    font-size: 21px;
-                    line-height: 1.2;
-                    font-family: 'Yeseva One';
-                    border-bottom: 1px solid #c89f2d;
-                    margin-top: 10px;
-                }
-            }
+        &:nth-last-child(2n) {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          color: #c89f2d;
+          font-size: 21px;
+          line-height: 1.2;
+          font-family: "Yeseva One";
+          border-bottom: 1px solid #c89f2d;
+          margin-top: 10px;
         }
+      }
     }
+  }
 }
 
 .sticker {
-    position: relative;
+  position: relative;
 
-    .special {
-        position: absolute;
-        right: 0;
-        margin-top: 15px;
-        color: $baseColor;
-        background: rgba(200, 159, 45, 0.8);
-        padding: 0px 14px;
-    }
+  .special {
+    position: absolute;
+    right: 0;
+    margin-top: 15px;
+    color: $baseColor;
+    background: rgba(200, 159, 45, 0.8);
+    padding: 0px 14px;
+  }
 
-    .boxSpecial2 {
-        @include border(goldenrod);
-        border-bottom: 0;
-    }
+  .boxSpecial2 {
+    @include border(goldenrod);
+    border-bottom: 0;
+  }
 
-    .boxSpecial2,
-    .boxSpecial3 {
-        padding: 5px 15px;
-    }
+  .boxSpecial2,
+  .boxSpecial3 {
+    padding: 5px 15px;
+  }
 
-    .boxSpecial3 {
-        @include border(goldenrod);
-        border-top: 0;
-    }
+  .boxSpecial3 {
+    @include border(goldenrod);
+    border-top: 0;
+  }
 }
 
 .boxWrapper1 div:nth-of-type(1) {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .boxWrapper2 div:nth-of-type(2) {
-    margin-top: -70px;
+  margin-top: -70px;
 }
-
 
 //   ........................... FIFTH BLOCK ..........................
 
 .fifthBlock {
-    position: relative;
-    height: 100vh;
-    background-image: url("../img/fifthBlock_img/food.jpg");
-    background-size: cover;
+  position: relative;
+  height: 100vh;
+  background-image: url("../img/fifthBlock_img/food.jpg");
+  background-size: cover;
 
-    .square {
-        position: absolute;
-        background: rgba(0, 0, 0, 0.6);
-        width: 45%;
-        height: 450px;
-        margin: 7.5% 30%;
-        padding-top: 5.5%;
+  .square {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.6);
+    width: 45%;
+    height: 450px;
+    margin: 7.5% 30%;
+    padding-top: 5.5%;
 
-        h1,
-        p {
-            color: $baseColor;
-            text-align: center;
-        }
-
-        h1 {
-            font-family: 'Yeseva One';
-            font-size: 36px;
-        }
-
-        p {
-            margin-bottom: 20px;
-            color: $baseColor;
-            font-size: 19px;
-            font-weight: bold;
-            line-height: 1.5;
-            font-family: 'Lato Regular';
-        }
-
-        img {
-            display: flex;
-            justify-content: center;
-            padding-left: 30%;
-            margin-bottom: 4%;
-        }
+    h1,
+    p {
+      color: $baseColor;
+      text-align: center;
     }
+
+    h1 {
+      font-family: "Yeseva One";
+      font-size: 36px;
+    }
+
+    p {
+      margin-bottom: 20px;
+      color: $baseColor;
+      font-size: 19px;
+      font-weight: bold;
+      line-height: 1.5;
+      font-family: "Lato Regular";
+    }
+
+    img {
+      display: flex;
+      justify-content: center;
+      padding-left: 30%;
+      margin-bottom: 4%;
+    }
+  }
 }
 
 // .........................................SIXTH BLOCK...........................
 
 .sixthBlock {
+  display: flex;
+  background-color: $baseColor;
+  padding: 102px 290px 0 215px;
+
+  .imgContainer {
     display: flex;
-    background-color: $baseColor;
-    padding: 102px 290px 0 215px;
 
-    .imgContainer {
-        display: flex;
-
-        img:first-child {
-            margin-right: 30px;
-        }
+    img:first-child {
+      margin-right: 30px;
     }
+  }
 }
 
 .textBox {
-    margin-left: 12%;
-    width: 480px;
+  margin-left: 12%;
+  width: 480px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  text-align: center;
+
+  h1 {
+    margin-bottom: 21px;
+    font-family: "YesevaOne";
+    font-size: 36px;
+    color: #cc9900;
+    font-weight: bold;
+  }
+
+  img {
+    margin-bottom: 32px;
+  }
+
+  p {
+    color: #4c4c4c;
+    font-family: "Lato";
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  form {
     display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    text-align: center;
-
-    h1 {
-        margin-bottom: 21px;
-    }
-
-    img {
-        margin-bottom: 32px;
-    }
+    flex-flow: column wrap;
+    text-align: left;
+    margin-top: 20px;
 
     p {
-        color: black;
+      color: #c9a131;
+      font-family: "Lato";
+      font-size: 16px;
+      font-weight: bold;
+      display: flex;
+
+      &:first-child {
+        margin-bottom: 10px;
+      }
     }
 
-    form {
-        display: flex;
-        flex-flow: column wrap;
-        text-align: left;
-        margin-top: 20px;
-
-        p {
-            color: gold;
-            display: flex;
-
-            &:first-child {
-                margin-bottom: 10px;
-            }
-        }
-
-        label input,
-        label select {
-            padding: 5px 0 5px 10px;
-            margin-top: 5px;
-        }
-
-        label span {
-            line-height: 1.2;
-            margin-left: 60%;
-
-        }
-
-        label input:focus {
-            border: 1px solid #c9a131;
-            outline: none;
-        }
-
-        label select:focus {
-            border: 1px solid #c9a131;
-            outline: none;
-        }
-
-        input:nth-child(1) {
-            margin-right: 30px;
-        }
-
-        label:last-child {
-            margin-top: 2px;
-            margin-left: 30px;
-        }
-
-        input:nth-child(3) {
-            margin-top: 34px;
-            background: #c9a131;
-            height: 39px;
-            width: 199px;
-            border: none;
-            color: #fff;
-            display: flex;
-            flex-direction: column;
-            align-self: center;
-            justify-content: center;
-            padding-left: 73px;
-        }
-
-        label input:last-child {
-            overflow: hidden;
-        }
+    label input,
+    label select {
+      padding: 5px 0 5px 10px;
+      margin-top: 5px;
     }
 
+    label span {
+      line-height: 1.2;
+      margin-left: 60%;
+    }
+
+    label input:focus {
+      border: 1px solid #c9a131;
+      outline: none;
+    }
+
+    label select:focus {
+      border: 1px solid #c9a131;
+      outline: none;
+    }
+
+    input:nth-child(1) {
+      margin-right: 30px;
+    }
+
+    label:last-child {
+      margin-top: 2px;
+      margin-left: 30px;
+    }
+
+    input:nth-child(3) {
+      margin-top: 34px;
+      background: #c9a131;
+      height: 39px;
+      width: 199px;
+      border: none;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+      justify-content: center;
+      padding-left: 73px;
+    }
+
+    label input:last-child {
+      overflow: hidden;
+    }
+  }
 }
 
 #calendar {
-    display: block;
-    background-image: url(../img/sixthBlock-img/calendar.png);
-    background-repeat: no-repeat;
-    background-size: 15px;
-    background-position: 95%;
-    cursor: pointer;
+  display: block;
+  background-image: url(../img/sixthBlock-img/calendar.png);
+  background-repeat: no-repeat;
+  background-size: 15px;
+  background-position: 95%;
+  cursor: pointer;
 }
 
-/* The Modal (background) */
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 11;
-    padding-top: 150px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+  position: fixed;
+  z-index: 11;
+  padding-top: 150px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
 
-    .modal-content {
-        background-color: #fefefe;
-        margin: -5% auto 0;
-        border: 1px solid #888;
-        width: 60%;
-        position: relative;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        animation-name: animatetop;
-        animation-duration: 0.4s;
-    }
+  .modal-content {
+    background-color: #fefefe;
+    margin: -5% auto 0;
+    border: 1px solid #888;
+    width: 60%;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+  }
 }
 
 #myBtn {
-    background-color: rgba(192, 166, 37, 0.8);
-    transition: .3s linear;
-    @include border(#fff);
-    cursor: pointer;
+  font-weight: bold;
+  background-color: rgba(192, 166, 37, 0.8);
+  transition: 0.3s linear;
+  @include border(#fff);
+  cursor: pointer;
 
-    &:hover {
-        background: rgb(8, 8, 7);
-        border-radius: 20px;
-        color: $baseColor;
-        @include border(#fff);
-    }
+  &:hover {
+    background: rgb(8, 8, 7);
+    border-radius: 20px;
+    color: $baseColor;
+    @include border(#fff);
+  }
 }
 
 .modal-header {
-    padding: 30px 16px;
-    background-color: #b58200;
+  padding: 30px 16px;
+  background-color: #b58200;
+  color: $baseColor;
+  font-size: 25px;
+
+  .close {
     color: $baseColor;
-    font-size: 25px;
+    float: right;
+    font-size: 40px;
+    font-weight: bold;
+    transform: translateY(-10px);
 
-    .close {
-        color: $baseColor;
-        float: right;
-        font-size: 40px;
-        font-weight: bold;
-        transform: translateY(-10px);
-
-        &:hover,
-        &:focus {
-            color: #824e01;
-            text-decoration: none;
-            cursor: pointer;
-        }
+    &:hover,
+    &:focus {
+      color: #824e01;
+      text-decoration: none;
+      cursor: pointer;
     }
+  }
 }
 
 #myModal .modal-body {
-    padding: 20px 16px;
-    font-size: 20px;
+  padding: 20px 16px;
+  font-size: 20px;
 
-    p {
-        color: black;
-    }
+  p {
+    color: black;
+  }
 }
 
 .modal-footer {
-    padding: 30px 16px;
-    background-color: #b58200;
-    color: $baseColor;
-    font-size: 25px;
+  padding: 30px 16px;
+  background-color: #b58200;
+  color: $baseColor;
+  font-size: 25px;
 }
 
 @keyframes animatetop {
-    from {
-        top: -300px;
-        opacity: 0
-    }
+  from {
+    top: -300px;
+    opacity: 0;
+  }
 
-    to {
-        top: 0;
-        opacity: 1
-    }
+  to {
+    top: 0;
+    opacity: 1;
+  }
 }
 
 /* ........................... FOOTER ........................*/
 
 footer {
-    margin-top: 50px;
-    min-height: 300px;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.93);
-    @include flexible;
+  margin-top: 50px;
+  min-height: 300px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.93);
+  @include flexible;
+
+  div {
+    text-align: center;
+    margin-top: 3%;
+    width: 24%;
+    display: flex;
+    flex-direction: column;
+
+    h1,
+    img {
+      margin-bottom: 20px;
+    }
 
     div {
-        text-align: center;
-        margin-top: 3%;
-        width: 24%;
+      margin-top: 25px;
+    }
+
+    &:first-child {
+      width: 100%;
+      max-width: 300px;
+    }
+
+    &:nth-child(n + 2) {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+
+      & div {
         display: flex;
-        flex-direction: column;
+        width: 100%;
+        flex-flow: row nowrap;
+        align-self: center;
+        justify-content: center;
+        height: 50px;
+      }
 
-        h1,
-        img {
-            margin-bottom: 20px;
+      & div i {
+        display: flex;
+        margin-top: 15px;
+        font-size: 22px;
+        padding-right: 13px;
+        cursor: pointer;
+        transition: 0.3s linear;
+
+        &:hover {
+          font-size: 30px;
         }
-
-        div {
-            margin-top: 25px;
-        }
-
-        &:first-child {
-            width: 100%;
-            max-width: 300px;
-        }
-
-        &:nth-child(n+2) {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-
-            & div {
-                display: flex;
-                width: 100%;
-                flex-flow: row nowrap;
-                align-self: center;
-                justify-content: center;
-                height: 50px;
-
-            }
-
-            & div i {
-                display: flex;
-                margin-top: 15px;
-                font-size: 22px;
-                padding-right: 13px;
-                cursor: pointer;
-                transition: 0.3s linear;
-
-                &:hover {
-                    font-size: 30px;
-                }
-            }
-        }
+      }
     }
+  }
 
-
-    .fa {
-        color: $baseColor;
-        margin-top: 25px;
-        padding-right: 10px;
-    }
-
+  .fa {
+    color: $baseColor;
+    margin-top: 25px;
+    padding-right: 10px;
+  }
 }
 
 div:nth-child(2) .first {
-    margin-left: 5px;
+  margin-left: 5px;
 }
 
 .fDivider {
-    margin-left: -50px;
-    width: 200px;
+  margin-left: -50px;
+  width: 200px;
 }
 
-
 .bottom div {
+  h1,
+  p {
+    color: $baseColor;
+  }
 
-    h1,
-    p {
-        color: $baseColor;
-    }
+  h1 {
+    font-family: "Yeseva One";
+    font-size: 21px;
+  }
 
-    h1 {
-        font-family: 'Yeseva One';
-        font-size: 21px;
-    }
-
-    p {
-        font-family: 'Lato';
-        font-size: 16px;
-        line-height: 1.5;
-    }
+  p {
+    font-family: "Lato";
+    font-size: 16px;
+    line-height: 1.5;
+  }
 }
 
 #toTop {
-    position: fixed;
-    right: 30px;
-    bottom: 30px;
-    transition: .3s linear;
-    color: rgba(185, 169, 92, 0.8);
-    border: 3px solid goldenrod;
-    border-radius: 50%;
-    padding: 10px;
-    font-size: 40px;
-    outline: none;
-    transition: 0.3s linear;
-
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  transition: 0.3s linear;
+  color: rgba(185, 169, 92, 0.8);
+  border: 3px solid goldenrod;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 40px;
+  outline: none;
+  transition: 0.3s linear;
 }
