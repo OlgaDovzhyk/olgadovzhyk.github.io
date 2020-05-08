@@ -14,7 +14,8 @@ $(document).ready(function () {
 });
 
 $("a[href='#bottom']").click(function () {
-  $("html, body").animate({
+  $("html, body").animate(
+    {
       scrollTop: $(document).height(),
     },
     2000
@@ -22,7 +23,8 @@ $("a[href='#bottom']").click(function () {
 });
 
 $(".sbtn").click(function () {
-  $("body, html").animate({
+  $("body, html").animate(
+    {
       scrollTop: 2015,
     },
     800
@@ -38,7 +40,8 @@ $(document).ready(function () {
     }
   });
   $("a[href='#toTop']").click(function () {
-    $("html, body").animate({
+    $("html, body").animate(
+      {
         scrollTop: 0,
       },
       2000
@@ -86,4 +89,19 @@ $(document).ready(function () {
     .css({
       color: "green",
     });
+});
+
+$(document).ready(function () {
+  $(".rightSide .dish").click(function () {
+    $(this).animate({ top: "-102%" }, "slow");
+    $(".sweet").animate({ top: "0%" }, 0);
+  });
+  $(".rightSide .sweet").click(function () {
+    $(this).animate({ top: "-102%" }, "slow");
+    $(".fish").animate({ top: "0%" }, 0);
+  });
+  $(".rightSide .fish").click(function () {
+    $(".fish").animate({ top: "-102%" }, "slow");
+    $(".dish").animate({ top: "0%" }, "slow");
+  });
 });
