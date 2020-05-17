@@ -293,10 +293,7 @@ button {
 
 .secondBlock {
     height: 700px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
     justify-content: space-around;
 }
 

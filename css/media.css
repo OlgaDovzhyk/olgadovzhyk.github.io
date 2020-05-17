@@ -1,209 +1,315 @@
 @media (max-width: 1200px),
 (min-width: 1200px) {
+
+
+
     .wrapper {
         padding-top: 0;
     }
-
-    .headerBottom h1 {
-        margin-top: 20vh;
-        color: whitesmoke;
-    }
-}
-
-@media (max-width: 1200px) {
 
     header {
         max-height: 100%;
         padding-bottom: 10vh;
     }
 
-    nav ul .fa:last-child {
-        margin-right: 0;
-        padding-right: 0;
-    }
-}
-
-@media (max-width: 992px) {
-
-    .headerTop {
-        justify-content: space-between;
+    Ї .headerBottom h1 {
+        margin-top: 20vh;
+        color: whitesmoke;
+        /*        color: green;*/
     }
 
-    #burger {
-        display: block;
-        z-index: 12;
-        position: fixed;
-        top: 38px;
-        left: 50%;
+    @media (max-width: 1200px) {
+
+        nav ul .fa:last-child {
+            margin-right: 0;
+            padding-right: 0;
+        }
     }
 
-    .menu {
-        display: none;
-        flex-direction: column;
-        position: fixed;
-        top: 40px;
-        left: 43.5%;
-        z-index: 12;
-        margin-top: 60px;
+    @media (max-width: 992px) {
+
+        .headerTop {
+            justify-content: space-between;
+        }
+
+
+        #burger {
+            display: block;
+            z-index: 12;
+            position: fixed;
+            top: 38px;
+            left: 50%;
+        }
+
+
+        .menu {
+            display: none;
+            flex-direction: column;
+            position: fixed;
+            top: 40px;
+            left: 43.5%;
+            z-index: 12;
+            margin-top: 60px;
+        }
+
+
+        .menu a {
+            padding: 10px 0 0 0;
+            font-size: 27px;
+            z-index: 12;
+        }
+
+        .menu a.pad {
+            padding: 10px 10px 0 13px;
+        }
+
+        .headerBottom h1 {
+            font-size: 70px;
+            margin-top: 23vh;
+            margin-bottom: 10vh;
+            /*        color: blue;*/
+        }
+
+
+        .bottom div:nth-child(n+2)>img {
+            max-width: 100%;
+            width: 250px;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 
-    /*................ // Menu disapires ......................... */
+    @media (max-width: 900px) {
 
-    .menu a {
-        padding: 10px 0 0 0;
-        font-size: 27px;
-        z-index: 12;
+        .sixthBlock .inputWrapper2 i.fa-calendar {
+            position: relative;
+            left: 50%;
+            color: red;
+        }
+
+        .sixthBlock .textBox h1 {
+            font-size: 25px;
+            /* color: black; */
+        }
+
+        .sixthBlock .textBox p {
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+        }
+
+        .sixthBlock .textBox label {
+            font-size: 14px;
+        }
+
     }
 
-    .menu a.pad {
-        padding: 10px 10px 0 13px;
+    @media (max-width: 850px) {
+        .headerTop {
+            position: relative;
+        }
+
+
+        .menu {
+            left: 42%;
+        }
+
+        a.fa {
+            transform: translateX(6px);
+        }
+
+        .headerBottom h1 {
+            font-size: 65px;
+            margin-bottom: 12.11vh;
+            /*        color: yellow;*/
+        }
+
+
+
+        .sixthBlock .textBox {
+            display: flex;
+            order: -1;
+        }
+
+        .sixthBlock .imgContainer img {
+            display: flex;
+            flex: 1 1 auto;
+            height: 100%;
+        }
+
+        .sixthBlock .imgContainer img:first-child {
+            margin: 0 20px 0 0;
+        }
+
+        .sixthBlock .globInputWrapper input {
+            width: auto;
+        }
+
+        .sixthBlock .inputWrapper2 #myBtn {
+            position: absolute;
+            bottom: 44%;
+            transition: 0s;
+
+        }
+
+
+        footer {
+            padding: 10px 0 0 0;
+        }
+
+        footer div:nth-child(-n+2) {
+            margin-bottom: 15px;
+        }
+
+        .bottom div {
+            display: block;
+            width: 100%;
+            height: 100vh;
+        }
+
+        footer div:nth-child(n+2) div img,
+        footer div:nth-child(n+2) div .fa {
+            transform: translateY(-20px);
+        }
     }
 
-    .headerBottom h1 {
-        font-size: 70px;
-        margin-top: 23vh;
-        margin-bottom: 10vh;
+    @media (max-width: 768px) {
+
+        .menu {
+            left: 41%;
+        }
+
+        .headerBottom h1 {
+            font-size: 60px;
+            margin-bottom: 13.93vh;
+        }
+
+        .secondBlock .leftSide h2 {
+            font-size: 29px;
+        }
+
+        .sixthBlock {
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        .sixthBlock .imgContainer {
+            display: flex;
+            flex: 1 1 auto;
+            padding: 0px;
+            flex-flow: row nowrap;
+
+        }
+
+        .sixthBlock .textBox {
+            display: flex;
+            order: -1;
+        }
+
+        .sixthBlock .imgContainer div {
+            display: flex;
+            flex: 1 1 auto;
+            max-height: 90%;
+            padding: 0;
+            margin: 0;
+        }
+
+
+        .sixthBlock .imgContainer img {
+            padding: 0;
+            margin: 0;
+        }
+
+        .sixthBlock .inputWrapper2 #myBtn {
+            position: absolute;
+            bottom: 0.3%;
+            transition: 0s;
+        }
+
+        .bottom {
+            flex-flow: row wrap;
+        }
+
+        .bottom div h1 {
+            margin-top: 25vh;
+            font-size: 25px;
+        }
+
+        .bottom div p {
+            font-size: 20px;
+        }
+
+        .bottom div span {
+            font-size: 18px;
+        }
+
+        .bottom div:nth-child(2) span img {
+            width: 45px;
+            height: 23px;
+        }
+
+        .bottom div:nth-child(3) div a .fa {
+            font-size: 70px;
+        }
     }
 
-    .secondBlock .leftSide p {
-        padding: 0 10%;
+    @media (max-width: 700px) {
+
+        .menu {
+            left: 39.5%;
+        }
+
+
     }
 
-    .bottom div:nth-child(n+2)>img {
-        max-width: 100%;
-        width: 250px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
+    @media (max-width: 655px) {
+        .headerBottom h1 {
+            /* color: black; */
+            margin-bottom: 15.2vh;
+            font-size: 57px;
+        }
 
-@media (max-width: 850px) {
-    .headerTop {
-        position: relative;
+
     }
 
-    .menu {
-        left: 42%;
+    @media (max-width: 650px) {
+        .headerBottom h1 {
+            /* color: aqua; */
+            margin-bottom: 15.2vh;
+        }
+
+        .menu {
+            left: 38.5%;
+        }
     }
 
-    a.fa {
-        transform: translateX(6px);
+    @media (max-width: 624px) {
+        .headerBottom h1 {
+            /* color: greenyellow; */
+            margin-bottom: 10vh;
+        }
+
+
+        .secondBlock .leftSide img {
+            flex: 0 2 auto;
+        }
+
     }
 
-    .headerBottom h1 {
-        font-size: 65px;
-        margin-bottom: 12.11vh;
+    @media (max-width: 550px) {
+
+
+        .menu {
+            left: 37%;
+        }
+
     }
 
-    footer {
-        padding: 10px 0 0 0;
-    }
-
-    footer div:nth-child(-n+2) {
-        margin-bottom: 15px;
-    }
-
-    .bottom div {
-        display: block;
-        width: 100%;
-        height: 100vh;
-    }
-
-    footer div:nth-child(n+2) div img,
-    footer div:nth-child(n+2) div .fa {
-        transform: translateY(-20px);
-    }
-}
-
-@media (max-width: 768px) {
-    .menu {
-        left: 41%;
-    }
-
-    .headerBottom h1 {
-        font-size: 60px;
-        margin-bottom: 13.93vh;
-    }
-
-    .secondBlock .leftSide h2 {
-        font-size: 29px;
-    }
-
-    .secondBlock .leftSide p {
-        padding: 0 10%;
-        font-size: 16px;
-    }
-
-    .secondBlock .leftSide .bottom {
-        flex-flow: row wrap;
-    }
-
-    .bottom div h1 {
-        margin-top: 25vh;
-        font-size: 25px;
-    }
-
-    .bottom div p {
-        font-size: 20px;
-    }
-
-    .bottom div span {
-        font-size: 18px;
-    }
-
-    .bottom div:nth-child(2) span img {
-        width: 45px;
-        height: 23px;
-    }
-
-    .bottom div:nth-child(3) div a .fa {
-        font-size: 70px;
-    }
-}
-
-@media (max-width: 700px) {
-    .menu {
-        left: 39.5%;
-    }
-}
-
-@media (max-width: 655px) {
-    .headerBottom h1 {
-        margin-bottom: 15.2vh;
-        font-size: 57px;
-    }
-}
-
-@media (max-width: 650px) {
-    .headerBottom h1 {
-        margin-bottom: 15.2vh;
-    }
-
-    .menu {
-        left: 38.5%;
-    }
-}
-
-@media (max-width: 624px) {
-    .headerBottom h1 {
-        margin-bottom: 10vh;
-    }
-
-    .secondBlock .leftSide .cook_img {
-        max-height: 157px;
-        height: 100%;
-    }
-}
-
-@media (max-width: 550px) {
-    .menu {
-        left: 37%;
-    }
-}
-
-@media (max-width: 521px) {
-    .headerBottom h1 {
-        margin-top: 19vh;
-        margin-bottom: 0;
+    @media (max-width: 521px) {
+        .headerBottom h1 {
+            /* color: black; */
+            margin-top: 19vh;
+            margin-bottom: 0;
+        }
     }
 }

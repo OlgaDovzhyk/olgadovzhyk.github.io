@@ -138,11 +138,15 @@
             If you've been to one of our restaurants, you've seen - and tasted -
             what keeps our customers coming back for more. Perfect materials and
             freshly baked food, delicious Lambda cakes, muffins, and gourmet
-            coffees make us hard to resist!
-            <br />
-            Stop in today and check us out!
+            coffees make us hard to resist! Stop in today and check us out!
           </p>
-          <img src="img/Secondblock_img/cook.png" class="cook_img" alt="cook" />
+          <div class="wrapper_cook_img">
+            <img
+              src="img/Secondblock_img/cook.png"
+              class="cook_img"
+              alt="cook"
+            />
+          </div>
         </div>
 
         <div class="rightSide">
@@ -159,7 +163,6 @@
           </div>
         </div>
       </section>
-
       <section class="thirdBlock">
         <div class="square">
           <h1>Fine ingredients</h1>
@@ -249,8 +252,12 @@
 
       <section class="sixthBlock">
         <div class="imgContainer">
-          <img src="img/sixthBlock-img/food_img1.jpg" alt="food1" />
-          <img src="img/sixthBlock-img/food_img2.jpg" alt="food2" />
+          <div>
+            <img src="img/sixthBlock-img/food_img1.jpg" alt="food1" />
+          </div>
+          <div>
+            <img src="img/sixthBlock-img/food_img2.jpg" alt="food2" />
+          </div>
         </div>
         <div class="textBox">
           <h1>Just the right food</h1>
@@ -266,80 +273,60 @@
 
           <div>
             <form id="bookTable" action="#" method="post">
-              <p>
-                <label for="name1"
-                  >Name
+              <div class="globInputWrapper">
+                <div class="inputWrapper1">
+                  <label for="name1"
+                    >Name<br />
+                    <input
+                      required
+                      type="text"
+                      name="name"
+                      placeholder="your name *"
+                      id="name1"
+                  /></label>
+
+                  <label
+                    >Email <br /><input
+                      required
+                      type="text"
+                      name="name"
+                      placeholder="your email *"
+                      id="name1"
+                  /></label>
+                </div>
+                <div class="inputWrapper2">
+                  <label
+                    >Date<br /><input
+                      id="datepicker"
+                      required
+                      type="text"
+                      placeholder="date *" /><i
+                      class="fa fa-calendar"
+                      aria-hidden="true"
+                    ></i
+                  ></label>
+
+                  <label
+                    >Party number<br /><input
+                      required
+                      list="party"
+                      placeholder="party number"
+                    />
+                    <datalist id="party">
+                      <option value="first"> </option>
+                      <option value="second"> </option>
+                      <option value="third"> </option>
+                      <option value="fourth"> </option>
+                      <option value="fifth"> </option>
+                    </datalist>
+                  </label>
+
                   <input
-                    required
-                    type="text"
-                    name="name"
-                    placeholder="your name *"
-                    id="name1"
-                /></label>
-
-                <label
-                  >Name <br /><input
-                    required
-                    type="text"
-                    name="name"
-                    placeholder="your email *"
-                    id="name1" /></label
-                ><br /><br />
-              </p>
-              <p>
-                <label style="position: relative;"
-                  >Date<span></span
-                  ><input
-                    id="datepicker"
-                    required
-                    type="text"
-                    placeholder="date *" /><i
-                    class="fa fa-calendar"
-                    aria-hidden="true"
-                    style="
-                      position: absolute;
-                      right: 10px;
-                      bottom: 9px;
-                      color: gray;
-                    "
-                  ></i
-                ></label>
-
-                <label
-                  >Party number <br /><input
-                    required
-                    list="party"
-                    placeholder="party number"
+                    type="submit"
+                    name="#bookTable"
+                    value="Book Now"
+                    id="myBtn"
                   />
-                  <datalist id="party">
-                    <option value="first"> </option>
-                    <option value="second"> </option>
-                    <option value="third"> </option>
-                    <option value="fourth"> </option>
-                    <option value="fifth"> </option>
-                  </datalist>
-                </label>
-              </p>
-
-              <input
-                type="submit"
-                name="#bookTable"
-                value="Book Now"
-                id="myBtn"
-              />
-              <div id="myModal" class="modal">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <span class="close">&times;</span>
-                    <h2>Modal Header</h2>
-                  </div>
-                  <div class="modal-body">
-                    <p>Some text in the Modal Body</p>
-                    <p>Some other text...</p>
-                  </div>
-                  <div class="modal-footer">
-                    <h3>Modal Footer</h3>
-                  </div>
                 </div>
               </div>
             </form>

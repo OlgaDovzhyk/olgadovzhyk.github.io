@@ -203,12 +203,21 @@ button {
 
 .secondBlock {
   height: 100vh;
+  // height: 700px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
   display: flex;
   justify-content: space-between;
   @include flexible;
 
   .leftSide {
     display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
     flex-flow: column nowrap;
     flex: 0 2 50%;
 
@@ -219,52 +228,80 @@ button {
       @include font(36px, 1.2);
     }
 
+    .divider {
+      margin: 10px auto;
+    }
+
     p {
       flex: 1 1 auto;
       font-family: $font2;
-      margin: 0;
-      padding: 0 18%;
+      padding: 0 10%;
       text-align: center;
       word-wrap: break-word;
       color: #000;
-      @include font(18px, 1.5);
+      @include font(16px, 1.5);
     }
 
-    .cook_img {
-      margin-top: 3vh;
-      margin-left: auto;
-      margin-right: auto;
+    .wrapper_cook_img {
+      // border: 3px solid rgb(58, 8, 8);
       display: flex;
-      flex: 0 1 auto;
+      justify-content: center;
+      flex: 1 1 100px;
+      position: relative;
+      overflow: hidden;
+
+      .cook_img {
+        position: absolute;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+      }
     }
   }
 
   .rightSide {
+    // padding-top: 5vh 0;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
     display: flex;
-    flex-flow: column;
+    flex-flow: column nowrap;
     flex: 2 1 auto;
 
     #slider {
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
       display: flex;
-      flex: 2 1 auto;
+      flex: 2 1 100%;
       overflow: hidden;
-      position: relative;
-      top: 0;
 
       #polosa {
         position: relative;
         top: 0;
         left: 0;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
         flex: 2 1 100%;
 
         img {
+          // border: 1px solid blue;
           width: 100%;
           height: 100%;
           object-fit: cover;
           position: absolute;
-          top: 0;
           cursor: pointer;
+
+          &.fish,
+          .sweet {
+            width: 100%;
+            height: 500px;
+          }
 
           &.dish {
             z-index: 3;
@@ -280,7 +317,21 @@ button {
     width: 240px;
     height: 25px;
     display: block;
-    margin: 15px auto;
+    margin: 0 auto 30px 34%;
+  }
+
+  .rightSide {
+    // border: 7px solid green;
+    // height: 700px;
+    // padding-top: 76px;
+    //        padding-right: 10%;
+    //        width: 55%;
+
+    img {
+      min-height: 100%;
+      // max-width: 551px;
+      width: 100%;
+    }
   }
 }
 
@@ -478,315 +529,298 @@ button {
 
 .sixthBlock {
   display: flex;
+  flex: 1 1 100vw;
+  // height: 100vh;
   background-color: $baseColor;
-  padding: 102px 290px 0 215px;
+  position: relative;
+  top: 0;
+  left: 0;
 
   .imgContainer {
     display: flex;
+    flex: 0 2 auto;
+    max-height: 100%;
+    justify-content: center;
+    position: relative;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    // border: 3px solid red;
 
-    img:first-child {
-      margin-right: 30px;
+    div {
+      display: flex;
+      flex: 1 1 auto;
+      max-height: 100%;
+      padding: 10px 5px 50px;
+    }
+
+    img {
+      display: flex;
+      flex: 1 1;
+      width: 100%;
+      max-height: 100%;
+      border: 10px solid rgba(185, 169, 92, 0.8);
+
+      &:first-child {
+        margin-right: 10px;
+      }
     }
   }
 }
 
 .textBox {
-  margin-left: 12%;
-  width: 480px;
   display: flex;
+  flex: 1 1 50%;
   flex-direction: column;
+  // padding: 10px 290px 0 215px;
+  padding: 10px 0px 0 0px;
   box-sizing: border-box;
   text-align: center;
 
   h1 {
-    margin-bottom: 21px;
-    font-family: "YesevaOne";
+    // margin-bottom: 21px;
+    font-family: 'YesevaOne';
     font-size: 36px;
     color: #cc9900;
     font-weight: bold;
   }
 
   img {
-    margin-bottom: 32px;
+    margin: 20px auto;
+    width: 234px;
+    height: auto;
+    // height: 26px;
   }
 
   p {
     color: #4c4c4c;
-    font-family: "Lato";
+    font-family: 'Lato';
     font-size: 16px;
     line-height: 1.5;
+    padding: 0 20px;
   }
 
   form {
-    display: flex;
-    flex-flow: column wrap;
     text-align: left;
     margin-top: 20px;
 
-    p {
-      color: #c9a131;
-      font-family: "Lato";
-      font-size: 16px;
-      font-weight: bold;
+    & .globInputWrapper {
       display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      flex: 1 1 auto;
+      height: 100%;
+      margin: 0 0 50px 0;
 
-      &:first-child {
-        margin-bottom: 10px;
+      & .inputWrapper1,
+      & .inputWrapper2 {
+        color: #38342a;
+        font-family: 'Lato';
+        font-size: 16px;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        flex-flow: row nowrap;
+        flex: 1 1 auto;
+        // border: 2px solid blueviolet;
+        margin-right: 50%;
+        margin-left: 50%;
+        // flex-flow: row nowrap;
+
+        & label:first-child {
+          margin: 0 10px 5px 0;
+        }
+      }
+
+
+
+      label input,
+      label select {
+        padding: 5px 0 5px 10px;
+        // margin-top: 5px;
+        flex: 1 1 25%;
+        // border: 1px solid blue;
+      }
+
+      label .fa-calendar {
+        line-height: 1.2;
+        position: relative;
+        top: -23px;
+        left: 90%;
+        color: blueviolet;
+      }
+
+      label input:focus {
+        border: 1px solid #c9a131;
+        outline: none;
+      }
+
+      label select:focus {
+        border: 1px solid #c9a131;
+        outline: none;
       }
     }
 
-    label input,
-    label select {
-      padding: 5px 0 5px 10px;
-      margin-top: 5px;
-    }
-
-    label span {
-      line-height: 1.2;
-      margin-left: 60%;
-    }
-
-    label input:focus {
-      border: 1px solid #c9a131;
-      outline: none;
-    }
-
-    label select:focus {
-      border: 1px solid #c9a131;
-      outline: none;
-    }
-
-    input:nth-child(1) {
-      margin-right: 30px;
-    }
-
-    label:last-child {
-      margin-top: 2px;
-      margin-left: 30px;
-    }
-
-    input:nth-child(3) {
-      margin-top: 34px;
-      background: #c9a131;
-      height: 39px;
-      width: 199px;
-      border: none;
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      align-self: center;
-      justify-content: center;
-      padding-left: 73px;
-    }
-
-    label input:last-child {
-      overflow: hidden;
-    }
   }
-}
 
-#calendar {
-  display: block;
-  background-image: url(../img/sixthBlock-img/calendar.png);
-  background-repeat: no-repeat;
-  background-size: 15px;
-  background-position: 95%;
-  cursor: pointer;
-}
-
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 11;
-  padding-top: 150px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
-
-  .modal-content {
-    background-color: #fefefe;
-    margin: -5% auto 0;
-    border: 1px solid #888;
-    width: 60%;
-    position: relative;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    animation-name: animatetop;
-    animation-duration: 0.4s;
-  }
-}
-
-#myBtn {
-  font-weight: bold;
-  background-color: rgba(192, 166, 37, 0.8);
-  transition: 0.3s linear;
-  @include border(#fff);
-  cursor: pointer;
-
-  &:hover {
-    background: rgb(8, 8, 7);
-    border-radius: 20px;
-    color: $baseColor;
-    @include border(#fff);
-  }
-}
-
-.modal-header {
-  padding: 30px 16px;
-  background-color: #b58200;
-  color: $baseColor;
-  font-size: 25px;
-
-  .close {
-    color: $baseColor;
-    float: right;
-    font-size: 40px;
+  #myBtn {
+    position: absolute;
+    padding: 10px 20px;
+    bottom: 15px;
+    margin: 0 auto;
     font-weight: bold;
-    transform: translateY(-10px);
+    background-color: rgba(192, 166, 37, 0.8);
+    transition: 0s linear;
+    @include border(#fff);
+    cursor: pointer;
 
-    &:hover,
-    &:focus {
-      color: #824e01;
-      text-decoration: none;
-      cursor: pointer;
+    &:hover {
+      background: rgba(0, 0, 0, 0.842);
+      color: $baseColor;
+      @include border(#fff);
     }
   }
-}
 
-#myModal .modal-body {
-  padding: 20px 16px;
-  font-size: 20px;
+  .modal-header {
+    padding: 30px 16px;
+    background-color: #b58200;
+    color: $baseColor;
+    font-size: 25px;
 
-  p {
-    color: black;
-  }
-}
+    .close {
+      color: $baseColor;
+      float: right;
+      font-size: 40px;
+      font-weight: bold;
+      transform: translateY(-10px);
 
-.modal-footer {
-  padding: 30px 16px;
-  background-color: #b58200;
-  color: $baseColor;
-  font-size: 25px;
-}
-
-@keyframes animatetop {
-  from {
-    top: -300px;
-    opacity: 0;
-  }
-
-  to {
-    top: 0;
-    opacity: 1;
-  }
-}
-
-/* ........................... FOOTER ........................*/
-
-footer {
-  margin-top: 50px;
-  min-height: 300px;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.93);
-  @include flexible;
-
-  div {
-    text-align: center;
-    margin-top: 3%;
-    width: 24%;
-    display: flex;
-    flex-direction: column;
-
-    h1,
-    img {
-      margin-bottom: 20px;
+      &:hover,
+      &:focus {
+        color: #824e01;
+        text-decoration: none;
+        cursor: pointer;
+      }
     }
+  }
+
+
+  @keyframes animatetop {
+    from {
+      top: -300px;
+      opacity: 0
+    }
+
+    to {
+      top: 0;
+      opacity: 1
+    }
+  }
+
+  /* ........................... FOOTER ........................*/
+
+  footer {
+    margin-top: 50px;
+    min-height: 300px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.93);
+    @include flexible;
 
     div {
-      margin-top: 25px;
-    }
-
-    &:first-child {
-      width: 100%;
-      max-width: 300px;
-    }
-
-    &:nth-child(n + 2) {
-      position: relative;
+      text-align: center;
+      margin-top: 3%;
+      width: 24%;
       display: flex;
       flex-direction: column;
 
-      & div {
-        display: flex;
-        width: 100%;
-        flex-flow: row nowrap;
-        align-self: center;
-        justify-content: center;
-        height: 50px;
+      h1,
+      img {
+        margin-bottom: 20px;
       }
 
-      & div i {
-        display: flex;
-        margin-top: 15px;
-        font-size: 22px;
-        padding-right: 13px;
-        cursor: pointer;
-        transition: 0.3s linear;
+      div {
+        margin-top: 25px;
+      }
 
-        &:hover {
-          font-size: 30px;
+      &:first-child {
+        width: 100%;
+        max-width: 300px;
+      }
+
+      &:nth-child(n + 2) {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        & div {
+          display: flex;
+          width: 100%;
+          flex-flow: row nowrap;
+          align-self: center;
+          justify-content: center;
+          height: 50px;
+        }
+
+        & div i {
+          display: flex;
+          margin-top: 15px;
+          font-size: 22px;
+          padding-right: 13px;
+          cursor: pointer;
+          transition: 0.3s linear;
+
+          &:hover {
+            font-size: 30px;
+          }
         }
       }
     }
+
+    .fa {
+      color: $baseColor;
+      margin-top: 25px;
+      padding-right: 10px;
+    }
   }
 
-  .fa {
-    color: $baseColor;
-    margin-top: 25px;
-    padding-right: 10px;
-  }
-}
-
-div:nth-child(2) .first {
-  margin-left: 5px;
-}
-
-.fDivider {
-  margin-left: -50px;
-  width: 200px;
-}
-
-.bottom div {
-
-  h1,
-  p {
-    color: $baseColor;
+  div:nth-child(2) .first {
+    margin-left: 5px;
   }
 
-  h1 {
-    font-family: "Yeseva One";
-    font-size: 21px;
+  .fDivider {
+    margin-left: -50px;
+    width: 200px;
   }
 
-  p {
-    font-family: "Lato";
-    font-size: 16px;
-    line-height: 1.5;
-  }
-}
+  .bottom div {
 
-#toTop {
-  position: fixed;
-  right: 30px;
-  bottom: 30px;
-  transition: 0.3s linear;
-  color: rgba(185, 169, 92, 0.8);
-  border: 3px solid goldenrod;
-  border-radius: 50%;
-  padding: 10px;
-  font-size: 40px;
-  outline: none;
-  transition: 0.3s linear;
+    h1,
+    p {
+      color: $baseColor;
+    }
+
+    h1 {
+      font-family: "Yeseva One";
+      font-size: 21px;
+    }
+
+    p {
+      font-family: "Lato";
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  }
+
+  #toTop {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    transition: 0.3s linear;
+    color: rgba(185, 169, 92, 0.8);
+    border: 3px solid goldenrod;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 40px;
+    outline: none;
+    transition: 0.3s linear;
+  }
 }
