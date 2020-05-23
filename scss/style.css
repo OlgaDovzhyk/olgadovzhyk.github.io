@@ -220,9 +220,6 @@ button {
 /* ...............SECOND BLOCK.......................................... */
 .secondBlock {
   height: 100vh;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -238,9 +235,6 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
@@ -300,9 +294,6 @@ button {
 }
 
 .secondBlock .rightSide {
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -316,9 +307,6 @@ button {
 }
 
 .secondBlock .rightSide #slider {
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -332,9 +320,6 @@ button {
   position: relative;
   top: 0;
   left: 0;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -355,23 +340,11 @@ button {
 .secondBlock .rightSide #slider #polosa img.fish,
 .secondBlock .rightSide #slider #polosa img .sweet {
   width: 100%;
-  height: 500px;
+  height: 100%;
 }
 
 .secondBlock .rightSide #slider #polosa img.dish {
   z-index: 3;
-}
-
-.secondBlock .divider {
-  width: 240px;
-  height: 25px;
-  display: block;
-  margin: 0 auto 30px 34%;
-}
-
-.secondBlock .rightSide img {
-  min-height: 100%;
-  width: 100%;
 }
 
 .thirdBlock {
@@ -589,60 +562,64 @@ button {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 100vw;
-          flex: 1 1 100vw;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background-color: #fff;
-  position: relative;
-  top: 0;
-  left: 0;
 }
 
 .sixthBlock .imgContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 2 auto;
-          flex: 0 2 auto;
-  max-height: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: relative;
-  top: 0;
-  left: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+  min-height: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
 }
 
 .sixthBlock .imgContainer div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-  max-height: 100%;
-  padding: 10px 5px 50px;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
 }
 
-.sixthBlock .imgContainer img {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1;
-          flex: 1 1;
+.sixthBlock .imgContainer div {
+  padding: 10px;
+}
+
+.sixthBlock .imgContainer div img {
+  top: 0;
+  left: 0;
   width: 100%;
-  max-height: 100%;
-  border: 10px solid rgba(185, 169, 92, 0.8);
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-.sixthBlock .imgContainer img:first-child {
-  margin-right: 10px;
-}
-
-.textBox {
+.sixthBlock .textBox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -653,43 +630,65 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 10px 0px 0 0px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  text-align: center;
-  /* ........................... FOOTER ........................*/
 }
 
-.textBox h1 {
+.sixthBlock .textBox .textWrapper_6 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  padding: 5px 0 0;
+}
+
+.sixthBlock .textBox .textWrapper_6 h1 {
+  text-align: center;
   font-family: 'YesevaOne';
   font-size: 36px;
   color: #cc9900;
   font-weight: bold;
 }
 
-.textBox img {
-  margin: 20px auto;
-  width: 234px;
-  height: auto;
+.sixthBlock .textBox .textWrapper_6 img {
+  margin: 10px auto;
 }
 
-.textBox p {
+.sixthBlock .textBox .textWrapper_6 p {
   color: #4c4c4c;
   font-family: 'Lato';
   font-size: 16px;
   line-height: 1.5;
-  padding: 0 20px;
+  padding: 0 5px;
+  margin: 0 auto;
+  text-align: center;
 }
 
-.textBox form {
-  text-align: left;
-  margin-top: 20px;
-}
-
-.textBox form .globInputWrapper {
+.sixthBlock .textBox .formWrapper_6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 5px 0 0;
+}
+
+.sixthBlock .textBox .formWrapper_6 form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
@@ -697,132 +696,97 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-  height: 100%;
-  margin: 0 0 50px 0;
 }
 
-.textBox form .globInputWrapper .inputWrapper1,
-.textBox form .globInputWrapper .inputWrapper2 {
-  color: #38342a;
-  font-family: 'Lato';
-  font-size: 16px;
-  font-weight: bold;
+.sixthBlock .textBox .formWrapper_6 form label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-orient: horizontal;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+}
+
+.sixthBlock .textBox .formWrapper_6 form label span {
+  color: #c9a131;
+}
+
+.sixthBlock .textBox .formWrapper_6 form label input {
+  border: 1px solid #c9a131;
+  color: #b48f28;
+}
+
+.sixthBlock .textBox .formWrapper_6 form label input input:nth-child(3) {
+  margin-top: 34px;
+  background: #c9a131;
+  height: 39px;
+  width: 199px;
+  border: none;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-  margin-right: 50%;
-  margin-left: 50%;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 73px;
 }
 
-.textBox form .globInputWrapper .inputWrapper1 label:first-child,
-.textBox form .globInputWrapper .inputWrapper2 label:first-child {
-  margin: 0 10px 5px 0;
+.sixthBlock .textBox .formWrapper_6 form label input #calendar {
+  display: block;
+  background-image: url(../img/sixthBlock-img/calendar.png);
+  background-repeat: no-repeat;
+  background-size: 15px;
+  background-position: 95%;
+  cursor: pointer;
 }
 
-.textBox form .globInputWrapper label input,
-.textBox form .globInputWrapper label select {
-  padding: 5px 0 5px 10px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 25%;
-          flex: 1 1 25%;
-}
-
-.textBox form .globInputWrapper label .fa-calendar {
-  line-height: 1.2;
-  position: relative;
-  top: -23px;
-  left: 90%;
-  color: blueviolet;
-}
-
-.textBox form .globInputWrapper label input:focus {
-  border: 1px solid #c9a131;
+.sixthBlock .textBox .formWrapper_6 form label input:focus {
+  border: 1px solid #b4a44b;
   outline: none;
+  color: #968529;
 }
 
-.textBox form .globInputWrapper label select:focus {
-  border: 1px solid #c9a131;
-  outline: none;
-}
-
-.textBox #myBtn {
-  position: absolute;
-  padding: 10px 20px;
-  bottom: 15px;
-  margin: 0 auto;
+.sixthBlock .textBox .formWrapper_6 #myBtn {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  max-width: 100px;
+  width: 100%;
+  padding: 5px 20px;
   font-weight: bold;
   background-color: rgba(192, 166, 37, 0.8);
-  -webkit-transition: 0s linear;
-  transition: 0s linear;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
   border: 1px solid #fff;
   cursor: pointer;
 }
 
-.textBox #myBtn:hover {
-  background: rgba(0, 0, 0, 0.842);
+.sixthBlock .textBox .formWrapper_6 #myBtn:hover {
+  background: rgba(0, 0, 0, 0.9);
   color: #fff;
   border: 1px solid #fff;
 }
 
-.textBox .modal-header {
-  padding: 30px 16px;
-  background-color: #b58200;
-  color: #fff;
-  font-size: 25px;
-}
-
-.textBox .modal-header .close {
-  color: #fff;
-  float: right;
-  font-size: 40px;
-  font-weight: bold;
-  -webkit-transform: translateY(-10px);
-          transform: translateY(-10px);
-}
-
-.textBox .modal-header .close:hover, .textBox .modal-header .close:focus {
-  color: #824e01;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-@-webkit-keyframes animatetop {
-  from {
-    top: -300px;
-    opacity: 0;
-  }
-  to {
-    top: 0;
-    opacity: 1;
-  }
-}
-
-@keyframes animatetop {
-  from {
-    top: -300px;
-    opacity: 0;
-  }
-  to {
-    top: 0;
-    opacity: 1;
-  }
-}
-
-.textBox footer {
-  margin-top: 50px;
+/* ........................... FOOTER ........................*/
+footer {
+  margin-top: 20px;
   min-height: 300px;
   height: 100%;
   background: rgba(0, 0, 0, 0.93);
@@ -833,7 +797,7 @@ button {
       justify-content: space-around;
 }
 
-.textBox footer div {
+footer div {
   text-align: center;
   margin-top: 3%;
   width: 24%;
@@ -846,21 +810,21 @@ button {
           flex-direction: column;
 }
 
-.textBox footer div h1,
-.textBox footer div img {
+footer div h1,
+footer div img {
   margin-bottom: 20px;
 }
 
-.textBox footer div div {
+footer div div {
   margin-top: 25px;
 }
 
-.textBox footer div:first-child {
+footer div:first-child {
   width: 100%;
   max-width: 300px;
 }
 
-.textBox footer div:nth-child(n + 2) {
+footer div:nth-child(n + 2) {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -871,7 +835,7 @@ button {
           flex-direction: column;
 }
 
-.textBox footer div:nth-child(n + 2) div {
+footer div:nth-child(n + 2) div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -888,7 +852,7 @@ button {
   height: 50px;
 }
 
-.textBox footer div:nth-child(n + 2) div i {
+footer div:nth-child(n + 2) div i {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -900,42 +864,42 @@ button {
   transition: 0.3s linear;
 }
 
-.textBox footer div:nth-child(n + 2) div i:hover {
+footer div:nth-child(n + 2) div i:hover {
   font-size: 30px;
 }
 
-.textBox footer .fa {
+footer .fa {
   color: #fff;
   margin-top: 25px;
   padding-right: 10px;
 }
 
-.textBox div:nth-child(2) .first {
+div:nth-child(2) .first {
   margin-left: 5px;
 }
 
-.textBox .fDivider {
+.fDivider {
   margin-left: -50px;
   width: 200px;
 }
 
-.textBox .bottom div h1,
-.textBox .bottom div p {
+.bottom div h1,
+.bottom div p {
   color: #fff;
 }
 
-.textBox .bottom div h1 {
+.bottom div h1 {
   font-family: "Yeseva One";
   font-size: 21px;
 }
 
-.textBox .bottom div p {
+.bottom div p {
   font-family: "Lato";
   font-size: 16px;
   line-height: 1.5;
 }
 
-.textBox #toTop {
+#toTop {
   position: fixed;
   right: 30px;
   bottom: 30px;

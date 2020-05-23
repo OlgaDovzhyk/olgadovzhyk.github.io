@@ -204,20 +204,12 @@ button {
 .secondBlock {
   height: 100vh;
   // height: 700px;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
   justify-content: space-between;
   @include flexible;
 
   .leftSide {
     display: flex;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
     flex-flow: column nowrap;
     flex: 0 2 50%;
 
@@ -243,7 +235,6 @@ button {
     }
 
     .wrapper_cook_img {
-      // border: 3px solid rgb(58, 8, 8);
       display: flex;
       justify-content: center;
       flex: 1 1 100px;
@@ -261,19 +252,11 @@ button {
 
   .rightSide {
     // padding-top: 5vh 0;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
     display: flex;
     flex-flow: column nowrap;
     flex: 2 1 auto;
 
     #slider {
-      display: -webkit-flex;
-      display: -moz-flex;
-      display: -ms-flex;
-      display: -o-flex;
       display: flex;
       flex: 2 1 100%;
       overflow: hidden;
@@ -282,15 +265,10 @@ button {
         position: relative;
         top: 0;
         left: 0;
-        display: -webkit-flex;
-        display: -moz-flex;
-        display: -ms-flex;
-        display: -o-flex;
         display: flex;
         flex: 2 1 100%;
 
         img {
-          // border: 1px solid blue;
           width: 100%;
           height: 100%;
           object-fit: cover;
@@ -300,7 +278,7 @@ button {
           &.fish,
           .sweet {
             width: 100%;
-            height: 500px;
+            height: 100%;
           }
 
           &.dish {
@@ -311,30 +289,6 @@ button {
     }
   }
 }
-
-.secondBlock {
-  .divider {
-    width: 240px;
-    height: 25px;
-    display: block;
-    margin: 0 auto 30px 34%;
-  }
-
-  .rightSide {
-    // border: 7px solid green;
-    // height: 700px;
-    // padding-top: 76px;
-    //        padding-right: 10%;
-    //        width: 55%;
-
-    img {
-      min-height: 100%;
-      // max-width: 551px;
-      width: 100%;
-    }
-  }
-}
-
 
 // ......................THIRD BLOCK............................................
 .thirdBlock {
@@ -529,298 +483,261 @@ button {
 
 .sixthBlock {
   display: flex;
-  flex: 1 1 100vw;
-  // height: 100vh;
+  flex: 1 1 100%;
+  justify-content: space-between;
+  box-sizing: border-box;
   background-color: $baseColor;
-  position: relative;
-  top: 0;
-  left: 0;
 
   .imgContainer {
     display: flex;
-    flex: 0 2 auto;
-    max-height: 100%;
-    justify-content: center;
-    position: relative;
-    top: 0;
-    left: 0;
-    box-sizing: border-box;
-    // border: 3px solid red;
+    justify-content: space-between;
+    flex: 1 1 50%;
+    min-height: 100%;
+    flex-flow: row nowrap;
 
     div {
       display: flex;
-      flex: 1 1 auto;
-      max-height: 100%;
-      padding: 10px 5px 50px;
-    }
+      flex-flow: row nowrap;
+      flex: 1 1 100%;
+      height: 100%;
+      position: relative;
+      top: 0;
+      left: 0;
 
-    img {
-      display: flex;
-      flex: 1 1;
-      width: 100%;
-      max-height: 100%;
-      border: 10px solid rgba(185, 169, 92, 0.8);
+      & {
+        padding: 10px;
+      }
 
-      &:first-child {
-        margin-right: 10px;
+      img {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
     }
   }
-}
 
-.textBox {
-  display: flex;
-  flex: 1 1 50%;
-  flex-direction: column;
-  // padding: 10px 290px 0 215px;
-  padding: 10px 0px 0 0px;
-  box-sizing: border-box;
-  text-align: center;
+  .textBox {
+    display: flex;
+    flex: 1 1 50%;
+    flex-direction: column;
 
-  h1 {
-    // margin-bottom: 21px;
-    font-family: 'YesevaOne';
-    font-size: 36px;
-    color: #cc9900;
-    font-weight: bold;
-  }
-
-  img {
-    margin: 20px auto;
-    width: 234px;
-    height: auto;
-    // height: 26px;
-  }
-
-  p {
-    color: #4c4c4c;
-    font-family: 'Lato';
-    font-size: 16px;
-    line-height: 1.5;
-    padding: 0 20px;
-  }
-
-  form {
-    text-align: left;
-    margin-top: 20px;
-
-    & .globInputWrapper {
+    .textWrapper_6 {
       display: flex;
-      flex-flow: row wrap;
-      justify-content: center;
       flex: 1 1 auto;
-      height: 100%;
-      margin: 0 0 50px 0;
+      // max-height: 50%;
+      flex-flow: column wrap;
+      padding: 5px 0 0;
 
-      & .inputWrapper1,
-      & .inputWrapper2 {
-        color: #38342a;
+      h1 {
+        text-align: center;
+        font-family: 'YesevaOne';
+        font-size: 36px;
+        color: #cc9900;
+        font-weight: bold;
+      }
+
+      img {
+        margin: 10px auto;
+      }
+
+      p {
+        color: #4c4c4c;
         font-family: 'Lato';
         font-size: 16px;
-        font-weight: bold;
-        display: flex;
-        justify-content: center;
-        flex-flow: row nowrap;
-        flex: 1 1 auto;
-        // border: 2px solid blueviolet;
-        margin-right: 50%;
-        margin-left: 50%;
-        // flex-flow: row nowrap;
-
-        & label:first-child {
-          margin: 0 10px 5px 0;
-        }
-      }
-
-
-
-      label input,
-      label select {
-        padding: 5px 0 5px 10px;
-        // margin-top: 5px;
-        flex: 1 1 25%;
-        // border: 1px solid blue;
-      }
-
-      label .fa-calendar {
-        line-height: 1.2;
-        position: relative;
-        top: -23px;
-        left: 90%;
-        color: blueviolet;
-      }
-
-      label input:focus {
-        border: 1px solid #c9a131;
-        outline: none;
-      }
-
-      label select:focus {
-        border: 1px solid #c9a131;
-        outline: none;
+        line-height: 1.5;
+        padding: 0 5px;
+        margin: 0 auto;
+        text-align: center;
       }
     }
 
-  }
-
-  #myBtn {
-    position: absolute;
-    padding: 10px 20px;
-    bottom: 15px;
-    margin: 0 auto;
-    font-weight: bold;
-    background-color: rgba(192, 166, 37, 0.8);
-    transition: 0s linear;
-    @include border(#fff);
-    cursor: pointer;
-
-    &:hover {
-      background: rgba(0, 0, 0, 0.842);
-      color: $baseColor;
-      @include border(#fff);
-    }
-  }
-
-  .modal-header {
-    padding: 30px 16px;
-    background-color: #b58200;
-    color: $baseColor;
-    font-size: 25px;
-
-    .close {
-      color: $baseColor;
-      float: right;
-      font-size: 40px;
-      font-weight: bold;
-      transform: translateY(-10px);
-
-      &:hover,
-      &:focus {
-        color: #824e01;
-        text-decoration: none;
-        cursor: pointer;
-      }
-    }
-  }
-
-
-  @keyframes animatetop {
-    from {
-      top: -300px;
-      opacity: 0
-    }
-
-    to {
-      top: 0;
-      opacity: 1
-    }
-  }
-
-  /* ........................... FOOTER ........................*/
-
-  footer {
-    margin-top: 50px;
-    min-height: 300px;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.93);
-    @include flexible;
-
-    div {
-      text-align: center;
-      margin-top: 3%;
-      width: 24%;
+    .formWrapper_6 {
       display: flex;
+      flex: 1 1 auto;
       flex-direction: column;
+      margin: 5px 0 0;
 
-      h1,
-      img {
-        margin-bottom: 20px;
-      }
-
-      div {
-        margin-top: 25px;
-      }
-
-      &:first-child {
-        width: 100%;
-        max-width: 300px;
-      }
-
-      &:nth-child(n + 2) {
-        position: relative;
+      form {
         display: flex;
-        flex-direction: column;
+        flex: 1 1 auto;
+        flex-flow: row wrap;
+        justify-content: center;
 
-        & div {
+        label {
           display: flex;
-          width: 100%;
-          flex-flow: row nowrap;
-          align-self: center;
+          flex-flow: column wrap;
           justify-content: center;
-          height: 50px;
-        }
+          align-items: center;
+          flex: 1 1 50%;
 
-        & div i {
-          display: flex;
-          margin-top: 15px;
-          font-size: 22px;
-          padding-right: 13px;
-          cursor: pointer;
-          transition: 0.3s linear;
+          span {
+            color: #c9a131;
+          }
 
-          &:hover {
-            font-size: 30px;
+          input {
+            border: 1px solid #c9a131;
+            color: #b48f28;
+
+            input:nth-child(3) {
+              margin-top: 34px;
+              background: #c9a131;
+              height: 39px;
+              width: 199px;
+              border: none;
+              color: #fff;
+              display: flex;
+              flex-direction: column;
+              align-self: center;
+              justify-content: center;
+              padding-left: 73px;
+            }
+
+            #calendar {
+              display: block;
+              background-image: url(../img/sixthBlock-img/calendar.png);
+              background-repeat: no-repeat;
+              background-size: 15px;
+              background-position: 95%;
+              cursor: pointer;
+            }
+
+            &:focus {
+              border: 1px solid #b4a44b;
+              outline: none;
+              color: #968529;
+            }
           }
         }
       }
+
+      #myBtn {
+        align-self: center;
+        max-width: 100px;
+        width: 100%;
+        padding: 5px 20px;
+        font-weight: bold;
+        background-color: rgba(192, 166, 37, 0.8);
+        transition: 0.3s linear;
+        @include border(#fff);
+        cursor: pointer;
+
+        &:hover {
+          background: rgba(0, 0, 0, 0.9);
+          color: $baseColor;
+          @include border(#fff);
+        }
+      }
     }
 
-    .fa {
-      color: $baseColor;
-      margin-top: 25px;
-      padding-right: 10px;
-    }
   }
+}
 
-  div:nth-child(2) .first {
-    margin-left: 5px;
-  }
+/* ........................... FOOTER ........................*/
 
-  .fDivider {
-    margin-left: -50px;
-    width: 200px;
-  }
+footer {
+  margin-top: 20px;
+  min-height: 300px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.93);
+  @include flexible;
 
-  .bottom div {
+  div {
+    text-align: center;
+    margin-top: 3%;
+    width: 24%;
+    display: flex;
+    flex-direction: column;
 
     h1,
-    p {
-      color: $baseColor;
+    img {
+      margin-bottom: 20px;
     }
 
-    h1 {
-      font-family: "Yeseva One";
-      font-size: 21px;
+    div {
+      margin-top: 25px;
     }
 
-    p {
-      font-family: "Lato";
-      font-size: 16px;
-      line-height: 1.5;
+    &:first-child {
+      width: 100%;
+      max-width: 300px;
+    }
+
+    &:nth-child(n + 2) {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+
+      & div {
+        display: flex;
+        width: 100%;
+        flex-flow: row nowrap;
+        align-self: center;
+        justify-content: center;
+        height: 50px;
+      }
+
+      & div i {
+        display: flex;
+        margin-top: 15px;
+        font-size: 22px;
+        padding-right: 13px;
+        cursor: pointer;
+        transition: 0.3s linear;
+
+        &:hover {
+          font-size: 30px;
+        }
+      }
     }
   }
 
-  #toTop {
-    position: fixed;
-    right: 30px;
-    bottom: 30px;
-    transition: 0.3s linear;
-    color: rgba(185, 169, 92, 0.8);
-    border: 3px solid goldenrod;
-    border-radius: 50%;
-    padding: 10px;
-    font-size: 40px;
-    outline: none;
-    transition: 0.3s linear;
+  .fa {
+    color: $baseColor;
+    margin-top: 25px;
+    padding-right: 10px;
   }
+}
+
+div:nth-child(2) .first {
+  margin-left: 5px;
+}
+
+.fDivider {
+  margin-left: -50px;
+  width: 200px;
+}
+
+.bottom div {
+
+  h1,
+  p {
+    color: $baseColor;
+  }
+
+  h1 {
+    font-family: "Yeseva One";
+    font-size: 21px;
+  }
+
+  p {
+    font-family: "Lato";
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+#toTop {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  transition: 0.3s linear;
+  color: rgba(185, 169, 92, 0.8);
+  border: 3px solid goldenrod;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 40px;
+  outline: none;
+  transition: 0.3s linear;
 }
